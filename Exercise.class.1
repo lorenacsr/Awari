@@ -1,0 +1,90 @@
+/*1) Qual o volume de pedidos por status, agrupados pelo ano do pedido de compra? */
+/*1) What is the volume of orders by status, grouped by purchase order year? */
+SELECT order_status as status_pedido,
+strftime('%Y',order_purchase_timestamp) as ano,
+count(*) as volume
+--Toda vez que ter responder por quantidade aí usa o count.Já quando precisa de totalização se usa o sum
+from olist_orders_dataset
+group by 1,2
+order by 2 asc
+
+/*2) Qual o volume de pedidos por mês do ano? Faça uma limpeza para trazer os resultados pelo nome do mês por extenso e pelo valor numérico.Ex.Janeiro 8069 */
+/*2) What is the volume of orders per month of the year? Do a cleaning to bring the results by the month name in full and by the numerical value.Ex.January 8069 */
+select case 
+		when strftime('%m',order_purchase_timestamp) = "01" then "Janeiro"
+		when strftime('%m',order_purchase_timestamp) = "02" then "Fevereiro"
+		when strftime('%m',order_purchase_timestamp) = "03" then "Março"
+		when strftime('%m',order_purchase_timestamp) = "04" then "Abril"
+		when strftime('%m',order_purchase_timestamp) = "05" then "Maio"
+		when strftime('%m',order_purchase_timestamp) = "06" then "Junho"
+		when strftime('%m',order_purchase_timestamp) = "07" then "Julho"
+		when strftime('%m',order_purchase_timestamp) = "08" then "Agosto"
+		when strftime('%m',order_purchase_timestamp) = "09" then "Setembro"
+		when strftime('%m',order_purchase_timestamp) = "10" then "Outubro"
+		when strftime('%m',order_purchase_timestamp) = "11" then "Novembro"
+		when strftime('%m',order_purchase_timestamp) = "12" then "Dezembro"
+	   else "Não Encontrado"
+	   end as mes_extenso,
+	   strftime('%m',order_purchase_timestamp) as mes_numerico,
+	   count(*) as volume
+from olist_orders_dataset
+group by 1,2
+order by 2 ASC
+
+/*3) Retorne o volume de pedidos por mês e por status, em que os meses não sejam Janeiro,Julho e Outubro,ordenados pelo mês descedente. */
+/*3) Return the order volume by month and by status, where the months are not January, July and October, sorted by the descending month. */
+select order_status as status,
+		case 
+		when strftime('%m',order_purchase_timestamp) = "01" then "Janeiro"
+		when strftime('%m',order_purchase_timestamp) = "02" then "Fevereiro"
+		when strftime('%m',order_purchase_timestamp) = "03" then "Março"
+		when strftime('%m',order_purchase_timestamp) = "04" then "Abril"
+		when strftime('%m',order_purchase_timestamp) = "05" then "Maio"
+		when strftime('%m',order_purchase_timestamp) = "06" then "Junho"
+		when strftime('%m',order_purchase_timestamp) = "07" then "Julho"
+		when strftime('%m',order_purchase_timestamp) = "08" then "Agosto"
+		when strftime('%m',order_purchase_timestamp) = "09" then "Setembro"
+		when strftime('%m',order_purchase_timestamp) = "10" then "Outubro"
+		when strftime('%m',order_purchase_timestamp) = "11" then "Novembro"
+		when strftime('%m',order_purchase_timestamp) = "12" then "Dezembro"
+	   else "Não Encontrado"
+	   end as mes_extenso,
+	   substr(order_purchase_timestamp,6,2) as mes_numerico,
+	   count(*) as volume
+from olist_orders_dataset
+where strftime('%m',order_purchase_timestamp) not in ("01","07","10")
+group by 1,2,3
+order by 3 desc
+
+/*4) Qual o volume de pedidos que foram entregues e que a data da entrega estava dentro do estimado? Agrupe por ano e por mês de compra */
+/*4) What was the volume of orders that were delivered and that the delivery date was within the estimated? Group by year and month of purchase */
+select 
+	strftime('%Y',order_purchase_timestamp) as ano,
+	strftime('%m',order_purchase_timestamp) as mês,
+	count(*) as Volume_Pedido
+from olist_orders_dataset
+where (order_status = "delivered"
+and order_delivered_customer_date is not null
+and order_delivered_customer_date <= order_estimated_delivery_date)
+Group by 1,2
+Order by 1,2 ASC
+
+/*5) Encontre uma forma de retornar em uma úncia coluna, o mês por extenso e o ano da data de compra do pedido.Ex:Janeiro de 2018*/
+/*5) Find a way to return, in a single column, the month in full and the year of the purchase date of the order.Ex:January 2018*/
+select strftime('%m',order_purchase_timestamp) || " de " || substr(order_purchase_timestamp,1,4) as data_extenso
+		,case 
+		when strftime('%m',order_purchase_timestamp) = "01" then "Janeiro" || " de " || substr(order_purchase_timestamp,1,4)
+		when strftime('%m',order_purchase_timestamp) = "02" then "Fevereiro" || " de " || substr(order_purchase_timestamp,1,4)
+		when strftime('%m',order_purchase_timestamp) = "03" then "Março" || " de " || substr(order_purchase_timestamp,1,4)
+		when strftime('%m',order_purchase_timestamp) = "04" then "Abril" || " de " || substr(order_purchase_timestamp,1,4)
+		when strftime('%m',order_purchase_timestamp) = "05" then "Maio" || " de " || substr(order_purchase_timestamp,1,4)
+		when strftime('%m',order_purchase_timestamp) = "06" then "Junho" || " de " || substr(order_purchase_timestamp,1,4)
+		when strftime('%m',order_purchase_timestamp) = "07" then "Julho" || " de " || substr(order_purchase_timestamp,1,4)
+		when strftime('%m',order_purchase_timestamp) = "08" then "Agosto" || " de " || substr(order_purchase_timestamp,1,4)
+		when strftime('%m',order_purchase_timestamp) = "09" then "Setembro" || " de " || substr(order_purchase_timestamp,1,4)
+		when strftime('%m',order_purchase_timestamp) = "10" then "Outubro" || " de " || substr(order_purchase_timestamp,1,4)
+		when strftime('%m',order_purchase_timestamp) = "11" then "Novembro" || " de " || substr(order_purchase_timestamp,1,4)
+		when strftime('%m',order_purchase_timestamp) = "12" then "Dezembro" || " de " || substr(order_purchase_timestamp,1,4)
+	   else "Não Encontrado"
+	   end as data_extenso_2
+from olist_orders_dataset
