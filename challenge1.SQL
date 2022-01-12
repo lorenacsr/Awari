@@ -1,3 +1,6 @@
+/*Exercícios usando DB Browser SQLite*/
+/*Exercises using DB Browser SQLite*/
+
 --selecione os dados da tabela de pagamentos onde só apareçam os tipos de pagamento “VOUCHER” e “BOLETO”.
 --select the data from the payment table where only the payment types “VOUCHER” and “BOLETO” appear.
 SELECT payment_type
