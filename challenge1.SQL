@@ -1,5 +1,3 @@
-Exercícios usando DB Browser SQLite e base de dados disponível pela Olist na plataforma Kaggle.
-
 --selecione os dados da tabela de pagamentos onde só apareçam os tipos de pagamento “VOUCHER” e “BOLETO”.
 --select the data from the payment table where only the payment types “VOUCHER” and “BOLETO” appear.
 SELECT payment_type
