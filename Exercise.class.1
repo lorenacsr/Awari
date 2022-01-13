@@ -88,3 +88,26 @@ select strftime('%m',order_purchase_timestamp) || " de " || substr(order_purchas
 	   else "Não Encontrado"
 	   end as data_extenso_2
 from olist_orders_dataset
+
+/*[ Desafio ] Apresente em uma única query, qual o volume total de pedidos, o volume de pedidos entregues, 
+o volume total de pedidos que foram entregues dentro do previsto e o volume de pedidos que não foram entregues no tempo previsto.*/
+select 
+	count(order_id) as total_pedidos,
+	(SELECT
+		count(order_id)
+		from olist_orders_dataset
+		WHERE order_status = "delivered" 
+		and order_delivered_customer_date is not null) as pedidos_entregues,
+	(SELECT
+		count(order_id)
+		from olist_orders_dataset
+		WHERE order_status = "delivered"
+		and order_delivered_customer_date is not null
+		and order_delivered_customer_date <= order_estimated_delivery_date) as dentro_previsto,
+	(SELECT
+		count(order_id)
+		from olist_orders_dataset
+		WHERE order_status = "delivered"
+		and order_delivered_customer_date is not null
+		and order_delivered_customer_date > order_estimated_delivery_date) as fora_previsto
+from olist_orders_dataset
