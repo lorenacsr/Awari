@@ -22,6 +22,6 @@ the total volume of orders that were delivered on schedule and the volume of ord
 2) Retorne os campos da tabela de produtos e calcule o volume de cada produto em um novo campo. | Return the fields from the products table and calculate the volume of each product in a new field.
 3) Retorne somente os reviews que não tem comentários. | Return only reviews that have no comments.
 4) Retorne pedidos que foram feitos somente no ano de 2017. | Return orders that were only placed in the year 2017.
-5) Encontre os clientes do estado de SP e que não morem na cidade de São Paulo. | Find customers from the state of SP and who do not live in the city of São Paulo.
+5) Encontre os clientes do estado de SP e que não morem na cidade de São Paulo. | Find customers from the state of SP and who do not live in the city of São Paulo.<br>
 [Respostas aqui](https://github.com/mdjlr21/Awari/blob/952d8256271167249b8f0430b80f813f0ba9a0b6/challenge1.SQL)<br>
 [Answers here](https://github.com/mdjlr21/Awari/blob/952d8256271167249b8f0430b80f813f0ba9a0b6/challenge1.SQL)
