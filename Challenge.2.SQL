@@ -34,8 +34,10 @@ Select * from
 	LIMIT 5) 
 order by Valor_Medio DESC
 
-/*3)mostre o valor vendido total de cada vendedor (seller_id) em cada uma das categorias de produtos, somente retornando os vendedores que nesse somatório e agrupamento venderam 
-mais de $1000. Desejamos ver a categoria do produto e os vendedores. Para cada uma dessas categorias, mostre seus valores de venda de forma decrescente.*/
+/*3)Mostre o valor vendido total de cada vendedor (seller_id) em cada uma das categorias de produtos, somente retornando os vendedores que nesse somatório e agrupamento venderam 
+mais de $1000. Desejamos ver a categoria do produto e os vendedores. Para cada uma dessas categorias, mostre seus valores de venda de forma decrescente.
+    Show the total sold value of each seller (seller_id) in each of the product categories, only returning the sellers who sold in this sum and grouping over $1000. We want to 
+see the product category and the sellers. For each of these categories, show your sales figures in descending order.*/
 
 SELECT
 Produtos.product_category_name Categoria,
