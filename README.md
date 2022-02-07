@@ -1,9 +1,11 @@
-## Awari
+# Awari
 Exercícios e projetos realizados durante o curso intensivo pela Awari em Ciência de Dados.<br/>
 A base de dados utilizada foi fornecida pela empresa [Olist](https://olist.com/pt-br/ads/olist-store-geral/?utm_source=google&utm_medium=search&utm_campaign=sup_aon_conv_branding&utm_content=pd_br_all_as18-mais_src_puro&utm_term=text_text_bck3_null_vendas_acesse&gclid=EAIaIQobChMIvK-Wkent9QIVDgaRCh3uJAQ5EAAYASAAEgJCffD_BwE) na plataforma Kaggle disponível [neste link](https://www.kaggle.com/olistbr/brazilian-ecommerce).<br>
 
 Exercises and projects carried out during the intensive course by Awari in Data Science.<br>
 The database used was provided by the company [Olist](https://olist.com/pt-br/ads/olist-store-geral/?utm_source=google&utm_medium=search&utm_campaign=sup_aon_conv_branding&utm_content=pd_br_all_as18-mais_src_puro&utm_term=text_text_bck3_null_vendas_acesse&gclid=EAIaIQobChMIvK-Wkent9QIVDgaRCh3uJAQ5EAAYASAAEgJCffD_BwE) on the Kaggle platform available [in this link](https://www.kaggle.com/olistbr/brazilian-ecommerce).<br>
+
+### Exercise class 1
 
 1) Qual o volume de pedidos por status, agrupados pelo ano do pedido de compra? | What is the volume of orders by status, grouped by purchase order year?<br>
 2) Qual o volume de pedidos por mês do ano? Faça uma limpeza para trazer os resultados pelo nome do mês por extenso e pelo valor numérico.Ex.Janeiro 8069 | What is the volume of orders per month of the year? Do a cleaning and bring the results by the month name in full and by the numerical value.Ex.January 8069<br>
