@@ -35,3 +35,21 @@ above 1000.<br>
 mais de $1000. Desejamos ver a categoria do produto e os vendedores. Para cada uma dessas categorias, mostre seus valores de venda de forma decrescente. | Show the total sold value of each seller (seller_id) in each of the product categories, only returning the sellers who sold in this sum and grouping over $1000. We want to see the product category and the sellers. For each of these categories, show your sales figures in descending order.<br>
 [Respostas aqui](https://github.com/mdjlr21/Awari/blob/e029c33cf684a11657ca2985b38c880c102cc31c/Challenge.2.SQL)<br>
 [Answers here](https://github.com/mdjlr21/Awari/blob/e029c33cf684a11657ca2985b38c880c102cc31c/Challenge.2.SQL)
+
+### Challenge 3 SQL
+1) Crie uma tabela analítica de todos os itens que foram vendidos, mostrando somente pedidos interestaduais. Queremos saber quantos dias os fornecedores demoram para postar o 
+produto, se o produto chegou ou não no prazo. Retorne todos os pagamentos do cliente, com suas datas de aprovação, valor da compra e o valor total que o cliente já gastou em 
+todas as suas compras, mostrando somente os clientes onde o valor da compra é diferente do valor total já gasto. Retorne as categorias válidas, suas somas totais dos valores 
+de vendas, um ranqueamento de maior valor para menor valor junto com o somatório acumulado dos valores pela mesma regra do ranqueamento. | Create an analytical table of all 
+items that were sold, showing only interstate orders. We want to know how many days it takes suppliers to post the product, whether or not the product arrived on time. Return
+all customer payments, with their approval dates, purchase amount, and the total amount the customer has already spent on all your purchases, showing only customers where the 
+purchase amount is different from the total amount already spent. Return valid categories, their total sums of values of sales, a ranking from highest value to lowest value 
+together with the cumulative sum of values by the same ranking rule.<br>
+2) Retorne todos os pagamentos do cliente, com suas datas de aprovação, valor da compra e o valor total que o cliente já gastou em todas as suas compras, mostrando somente os 
+clientes onde o valor da compra é diferente do valor total já gasto. | Return all customer payments, with their approval dates, purchase amount and the total amount the customer
+has already spent on all their purchases, showing only the customers where the purchase amount is different from the total amount already spent.<br>
+3) Retorne as categorias válidas, suas somas totais dos valores de vendas, um ranqueamento de maior valor para menor valor junto com o somatório acumulado dos valores pela 
+mesma regra do ranqueamento. | Return valid categories, their total sums of sales amounts, a ranking from highest to lowest value along with the cumulative sum of values by
+same ranking rule.<br>
+[Respostas aqui](https://github.com/mdjlr21/Awari/blob/a014002707c6542ac4a89e072adf1517c4e6134d/Challenge.3.SQL)<br>
+[Answers here](https://github.com/mdjlr21/Awari/blob/a014002707c6542ac4a89e072adf1517c4e6134d/Challenge.3.SQL)
