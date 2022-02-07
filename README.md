@@ -53,3 +53,15 @@ mesma regra do ranqueamento. | Return valid categories, their total sums of sale
 same ranking rule.<br>
 [Respostas aqui](https://github.com/mdjlr21/Awari/blob/a014002707c6542ac4a89e072adf1517c4e6134d/Challenge.3.SQL)<br>
 [Answers here](https://github.com/mdjlr21/Awari/blob/a014002707c6542ac4a89e072adf1517c4e6134d/Challenge.3.SQL)
+
+### Challenge 4 SQL
+1) Crie uma view (SELLER_STATS) para mostrar por fornecedor, a quantidade de itens enviados, o tempo médio de postagem após a aprovação da compra, a quantidade total de 
+pedidos de cada Fornecedor, note que trabalharemos na mesma query com 2 granularidades diferentes. | Create a view (SELLER_STATS) to show by supplier, the quantity of items 
+shipped, the average postage time after purchase approval, the total quantity of orders from each Supplier, note that we will work on the same query with 2 different 
+granularities.<br>
+2) Queremos dar um cupom de 10% do valor da última compra do cliente. Porém os clientes elegíveis a este cupom devem ter feito uma compra anterior a última (a partir da data 
+de aprovação do pedido) que tenha sido maior ou igual o valor da última compra. Crie uma querie que retorne os valores dos cupons para cada um dos clientes elegíveis. | We want 
+to give a coupon of 10% of the value of the customer's last purchase. However, customers eligible for this coupon must have made a purchase before the last one (from the date
+order approval) that was greater than or equal to the value of the last purchase. Create a query that returns the coupon values for each of the eligible customers.<br>
+[Respostas aqui](https://github.com/mdjlr21/Awari/blob/a7dd4938ac96ce7a416058e3e159c05d26edded1/challenge.4.sql)<br>
+[Answers here](https://github.com/mdjlr21/Awari/blob/a7dd4938ac96ce7a416058e3e159c05d26edded1/challenge.4.sql)
