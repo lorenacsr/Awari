@@ -25,7 +25,7 @@ ORDER by Total_Pedidos DESC
 /*2) Queremos dar um cupom de 10% do valor da última compra do cliente. Porém os clientes elegíveis a este cupom devem ter feito uma compra anterior a última (a partir da data 
 de aprovação do pedido) que tenha sido maior ou igual o valor da última compra. Crie uma querie que retorne os valores dos cupons para cada um dos clientes elegíveis. | We want 
 to give a coupon of 10% of the value of the customer's last purchase. However, customers eligible for this coupon must have made a purchase before the last one (from the date
-order approval) that was greater than or equal to the value of the last purchase. Create a query that returns the coupon values ​​for each of the eligible customers.*/
+order approval) that was greater than or equal to the value of the last purchase. Create a query that returns the coupon values for each of the eligible customers.*/
 
 SELECT 
 	*,
