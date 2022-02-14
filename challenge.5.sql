@@ -1,4 +1,4 @@
-/*Crie os índices apropriadaos para as atbelas do nosso modelo de dados com o intuito de melhorar a performance.*\
+/*Crie os índices apropriadaos para as atbelas do nosso modelo de dados com o intuito de melhorar a performance.*/
 
 CREATE INDEX customer on olist_customers_dataset (customer_id,customer_unique_id,customer_zip_code_prefix,customer_city,customer_state);
 CREATE INDEX id on olist_customers_dataset (customer_id);
