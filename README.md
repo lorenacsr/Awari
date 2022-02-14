@@ -53,3 +53,8 @@ to give a coupon of 10% of the value of the customer's last purchase. However, c
 order approval) that was greater than or equal to the value of the last purchase. Create a query that returns the coupon values for each of the eligible customers.<br>
 [Respostas aqui](https://github.com/mdjlr21/Awari/blob/a7dd4938ac96ce7a416058e3e159c05d26edded1/challenge.4.sql)<br>
 [Answers here](https://github.com/mdjlr21/Awari/blob/a7dd4938ac96ce7a416058e3e159c05d26edded1/challenge.4.sql)
+
+### Challenge 5 SQL
+1) Crie os índices apropriadaos para as atbelas do nosso modelo de dados com o intuito de melhorar a performance.<br>
+[Respostas aqui](https://github.com/lorenacsr/Awari/blob/a183d83b55c5e3be2b558abbc3458a6ed628da6a/challenge.5.sql)<br>
+[Answers here](https://github.com/lorenacsr/Awari/blob/a183d83b55c5e3be2b558abbc3458a6ed628da6a/challenge.5.sql)<br>
