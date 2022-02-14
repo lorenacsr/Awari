@@ -6,14 +6,14 @@ SELECT payment_type
 
 /*2)Retorne os campos da tabela de produtos e calcule o volume de cada produto em um novo campo.
     Return the fields from the products table and calculate the volume of each product in a new field.*/
-SELECT *,(SELECT product_height_cm * product_length_cm * product_width_cm) AS Volume 
+SELECT *, product_height_cm * product_length_cm * product_width_cm AS Volume 
 FROM olist_products_dataset
 
 /*3)Retorne somente os reviews que não tem comentários.
     Return only reviews that have no comments.*/
 SELECT review_id, order_id, review_score, review_comment_title, review_comment_message, review_creation_date, review_answer_timestamp
 FROM olist_order_reviews_dataset
-WHERE review_comment_title is not NULL AND review_comment_message is not NULL;
+WHERE review_comment_title is NULL AND review_comment_message is NULL;
 
 /*4)Retorne pedidos que foram feitos somente no ano de 2017.
     Return orders that were only placed in the year 2017.*/
