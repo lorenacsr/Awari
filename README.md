@@ -11,8 +11,8 @@ The database used was provided by the company [Olist](https://olist.com/pt-br/ad
 3) Retorne somente os reviews que não tem comentários. | Return only reviews that have no comments.
 4) Retorne pedidos que foram feitos somente no ano de 2017. | Return orders that were only placed in the year 2017.
 5) Encontre os clientes do estado de SP e que não morem na cidade de São Paulo. | Find customers from the state of SP and who do not live in the city of São Paulo.<br>
-[Respostas aqui](https://github.com/mdjlr21/Awari/blob/952d8256271167249b8f0430b80f813f0ba9a0b6/challenge1.SQL)<br>
-[Answers here](https://github.com/mdjlr21/Awari/blob/952d8256271167249b8f0430b80f813f0ba9a0b6/challenge1.SQL)
+[Respostas aqui](https://github.com/lorenacsr/Awari/blob/2449858bcb72be284d480e52dd2a8d91ae653865/challenge1.SQL)<br>
+[Answers here](https://github.com/lorenacsr/Awari/blob/2449858bcb72be284d480e52dd2a8d91ae653865/challenge1.SQL)
 
 ### Challenge 2 SQL
 1) Retorne a quantidade de itens vendidos em cada categoria por estado em que o cliente se encontra, mostrando somente categorias que tenham vendido uma quantidade de items 
